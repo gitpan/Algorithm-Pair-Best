@@ -1,0 +1,6 @@
+Revision history for Perl extension Algorithm::Pair::Best.
+
+0.01  Thu Jan 13 19:08:24 2005
+	- original version; created by h2xs 1.23 with options
+		-A -X Algorithm::Pair::Best
+

@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Algorithm-Pair-Best.t
+lib/Algorithm/Pair/Best.pm
+META.yml                                 Module meta-data (added by MakeMaker)
