@@ -1,4 +1,4 @@
-# $Id: Best.pm,v 1.9 2005/01/14 06:08:35 reid Exp $
+# $Id: Best.pm,v 1.10 2005/01/24 02:21:46 reid Exp $
 
 #   Algorithm::Pair::Best.pm
 #
@@ -78,9 +78,6 @@ See the description of the B<window> option below.
 # first, some boilerplate:
 use strict;
 require 5.001;
-BEGIN {
-    our $VERSION = sprintf "%d.%03d", '$Revision: 1.9 $' =~ /(\d+)/g;
-}
 
 
 # an Algorithm::Pair::Best is a pairing object.  it is one member of a linked list of
@@ -90,6 +87,27 @@ BEGIN {
 #    are 'add'ed to the root Algorithm::Pair::Best object.
 package Algorithm::Pair::Best;
 use Carp;
+
+our @ISA = qw(Exporter);
+
+# Items to export into callers namespace by default. Note: do not export
+# names by default without a very good reason. Use EXPORT_OK instead.
+# Do not simply export all your public functions/methods/constants.
+
+# This allows declaration       use PackageName ':all';
+# If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
+# will save memory.
+our %EXPORT_TAGS = ( 'all' => [ qw(
+) ] );
+
+our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
+
+our @EXPORT = qw(
+);
+
+BEGIN {
+    our $VERSION = sprintf "%d.%03d", '$Revision: 1.10 $' =~ /(\d+)/g;
+}
 
 # uncomment the following line if perl -d is giving you recursion warnings:
 # $DB::deep = 1000;     # potentially deep recursion here
@@ -150,7 +168,7 @@ below).
 
 =over 4
 
-=item B<window>
+=item B<window> => number of pairs
 
 Sets the default number of pairs in the sliding pairing window during a
 B<pick>.  Can also be set by passing a B<window> argument to B<pick>.
@@ -165,7 +183,7 @@ B<Games::Go::AGA> for a working example.
 
 Default: 5
 
-=item B<negOnly>
+=item B<negOnly> => true or false
 
 Enable/disable the 'negative scores only" optimization.  If any score greater
 than 0 is found during B<sortCandidates>, Algorithm::Pair::Best turns this
@@ -176,10 +194,9 @@ than 0, the resultant pairing may not be optimal, even locally.
 
 Default: 1 (enabled)
 
-=item B<scoreSubs>
+=item B<scoreSubs> => reference to array of scoring subroutines
 
-A reference to an array of scoring subroutines.  Scoring subroutines are
-called in array order as:
+Scoring subroutines are called in array order as:
 
     foreach my $s (@{$my->scoreSubs}) {
         $score += $my->$s($candidate);
@@ -544,7 +561,7 @@ last item.
 
 Note that while the pairing starts from the first item in the B<add> list, the
 returned pairs list may contain items from outside the first 2*B<$window> items
-in the B<add> list.  This is because each item has it's own ordered list of
+in the B<add> list.  This is because each item has its own ordered list of
 preferred pairs.  However, the first unpaired item in the B<add> list will be
 the first item in the returned list.
 
@@ -702,7 +719,7 @@ __END__
 
 =item o gopair(1)
 
-The B<gopair> script from the Games::Go::AGA package uses
+The B<gopair> script from the Games::Go::GoPair package uses
 Algorithm::Pair::Best to run pairings for a go tournament
 
 =back

@@ -1,8 +1,8 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Algorithm-Pair-Best
-version:      1.009
-version_from: lib/Algorithm/Pair/Best.pm
+version:      1.010
+version_from: Best.pm
 installdirs:  site
 requires:
 
