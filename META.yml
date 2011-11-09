@@ -1,10 +1,23 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Algorithm-Pair-Best
-version:      1.010
-version_from: Best.pm
-installdirs:  site
+---
+abstract: 'deprecated - use Algorithm::Pair::Best2'
+author:
+  - 'Reid Augustin <reid@hellosix.com>'
+build_requires:
+  English: 0
+  IO::File: 0
+  Test::More: 0
+  warnings: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300000, CPAN::Meta::Converter version 2.112150'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Algorithm-Pair-Best
 requires:
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.25
+  Carp: 0
+  perl: 5.001
+  strict: 0
+version: 1.036

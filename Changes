@@ -1,5 +1,14 @@
 Revision history for Perl extension Algorithm::Pair::Best.
 
+1.036 Tue Nov  8 14:30:41 PST 2011
+    convert to git and Dist::Zilla
+    make this a deprecated module, use Algorithm::Pair::Best2
+
+1.025 Fri Nov 24 13:21:19 PST 2006
+    use Subversion (svn) in $VERSION.
+    added new_score optional arg to score method.
+    changed some pod.
+
 1.010 Sun Jan 23 18:19:08 PST 2005
     put VERSION inside the package declaration (doh!)
     put EXPORT stuff in

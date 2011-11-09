@@ -1,29 +1,6 @@
-Algorithm-Pair-Best - pure-perl 'best score' pairing algorithm
+Algorithm-Pair-Best - deprecated: use AlgorithmAlgorithm-Pair-Best2
 ===================
 
-Algorithm::Pair::Best provides a 'best score' pairing algorithm (for go
-tournaments, for example).  Every possible pair gets a 'score' (or perhaps
-'penalty' is a better way to think about it) via user defined subroutines, and
-Algorithm::Pair::Best tries all possible combinations of pairs to return the
-pairings with the best total score (lowest penalty).
-
-
-INSTALLATION
-
-To install this module type the following:
-
-   perl Makefile.PL
-   make
-   make test
-   make install
-
-
-COPYRIGHT AND LICENCE
-
-Copyright (C) 2005 by Reid Augustin
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.3 or,
-at your option, any later version of Perl 5 you may have available.
-
+Please change to Algorithm::Pair::Best2 which provides a much improved
+interface and implementation.
 

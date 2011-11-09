@@ -1,7 +1,10 @@
 Changes
-Makefile.PL
+LICENSE
 MANIFEST
+META.yml
+Makefile.PL
 README
+dist.ini
+lib/Algorithm/Pair/Best.pm
 t/Algorithm-Pair-Best.t
-Best.pm
-META.yml                                 Module meta-data (added by MakeMaker)
+t/author-critic.t
